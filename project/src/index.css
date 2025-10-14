@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .pos-btn-primary {
+    @apply bg-pos-green hover:bg-green-600 text-white font-medium px-4 py-2 rounded-lg transition-colors duration-200;
+  }
+  
+  .pos-btn-secondary {
+    @apply bg-gray-100 hover:bg-gray-200 text-pos-dark font-medium px-4 py-2 rounded-lg transition-colors duration-200;
+  }
+  
+  .pos-card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200;
+  }
+  
+  .pos-input {
+    @apply w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-pos-green focus:border-transparent transition-colors;
+  }
+  
+  /* Dark theme variants */
+  .dark .pos-card {
+    @apply bg-pos-dark-card border-pos-dark-border;
+  }
+  
+  .dark .pos-input {
+    @apply bg-pos-dark-card border-pos-dark-border text-white;
+  }
+  
+  .dark .pos-btn-secondary {
+    @apply bg-pos-dark-card hover:bg-pos-medium text-white border border-pos-dark-border;
+  }
+}
